@@ -7,7 +7,7 @@ interface IParams{
     conversationId?: string
 }
 export const POST = async (request: Request,
-    {params}:{params: IParams}
+    {params}:{params: Promise<IParams>}
 ) : Promise<NextResponse> =>{
     try {
         const {conversationId} = await params;
